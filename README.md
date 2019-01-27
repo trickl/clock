@@ -5,9 +5,10 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/be4af1f4cc620e465849/test_coverage)](https://codeclimate.com/github/trickl/clock/test_coverage)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A set of short utility functions for parsing common English clock constructs. 
+A set of java.time.Clock implementations with more useful functionality.
 
-Specifically - reading numbers, currency amounts and durations as English text and converting into a strongly typed class.
+MutableClock - A version of FixedClock with a mutable time.
+RelativeClock - An adjustable clock that time keeps using a relative clock, but can be stopped, started and run at variable speeds.
 
 ### Prerequisites
 
