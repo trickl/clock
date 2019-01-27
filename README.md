@@ -1,4 +1,4 @@
-# Trickl Language
+# Trickl Clock
 
 [![build_status](https://travis-ci.com/trickl/clock.svg?branch=master)](https://travis-ci.com/trickl/clock)
 [![Maintainability](https://api.codeclimate.com/v1/badges/be4af1f4cc620e465849/maintainability)](https://codeclimate.com/github/trickl/clock/maintainability)
