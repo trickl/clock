@@ -1,8 +1,8 @@
 # Trickl Clock
 
 [![build_status](https://travis-ci.com/trickl/clock.svg?branch=master)](https://travis-ci.com/trickl/clock)
-[![Maintainability](https://api.codeclimate.com/v1/badges/be4af1f4cc620e465849/maintainability)](https://codeclimate.com/github/trickl/clock/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/be4af1f4cc620e465849/test_coverage)](https://codeclimate.com/github/trickl/clock/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/6039371d2409365c76dc/maintainability)](https://codeclimate.com/github/trickl/clock/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/6039371d2409365c76dc/test_coverage)](https://codeclimate.com/github/trickl/clock/test_coverage)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A set of java.time.Clock implementations with more useful functionality.
