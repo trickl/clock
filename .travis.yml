@@ -1,16 +1,17 @@
 language: java
 env:
-   global:
-     - CC_TEST_REPORTER_ID=5652c0db4c6b50a85b5ec103eedd3db9ab43c6605e106394bc5f784ed548c4ba
+  global:
+  - CC_TEST_REPORTER_ID=5652c0db4c6b50a85b5ec103eedd3db9ab43c6605e106394bc5f784ed548c4ba
 before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+  > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- "./cc-test-reporter before-build"
 script:
-  - mvn test
+- mvn test
 after_script:
-  - ./cc-test-reporter format-coverage -d -t jacoco ./target/jacoco-ut/jacoco.xml
-  - ./cc-test-reporter upload-coverage -d
+- "./cc-test-reporter format-coverage -d -t jacoco ./target/jacoco-ut/jacoco.xml"
+- "./cc-test-reporter upload-coverage -d"
 before_deploy:
 - mvn help:evaluate -N -Dexpression=project.version|grep -v '\['
 - export project_version=$(mvn help:evaluate -N -Dexpression=project.version|grep
@@ -18,9 +19,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: iF2SlYVZkrGVtm7rWYPBvfnkfgbb91fLpU7CseqaL3oPp9IWHZm6OgrNEQjfRpvZ+hyvVxzSCN5oOSBcESfQZ8qXShAXbCRkENmji6dLLjgTzsQuvNLTxqKWybTFWniJSXQ9lFtJCcFg3WeRZJTX0pJjl7+/VyOtOO3lV9OYfoZXPxtFizJy/igJ0y80jRTRqqup1CTD24VlA4shs4cq1N0WeqDTjFx0SmJbe9wkaI4AHQ0klnEhNzgfiKqN6JW3IYg+K8GG6TcQmHxUe/os/l6DAZegVERDhOIty8sG65k9mFfplSnez8wQwiFvowWxq8TdeqnXWFjJrAaYvWHndwj9l9s880d82Hk+M6z+R+DH/mC8kUmOxZVf/mnSnqTc8v/y2GEqJucUKUvANm5ljh9hFI8fXQvyJywh06P4FrDJTUBLmWPDUOj1Pg0oM9hWUqi1yc8+VMRmbwk/CygpEyGEUTnD47BxSarockCCg5lfKOV6mE23zh2hCJuJD7ETfQcOCHqRE13puE+h9xJzEaDKA8U9cj2jyDdDKP2oq74EZzworqt3DeXlYiC2R1GFWVdvUJumMhzIJ9Xbw+gTh9eOG07SIL2ZtaugJqgYHaxh2joGG/LkjusYThFWmqTns2MK8bGY10q0E9DNjMFF75m7593famN9QTJcIiYhxlI=
-  file: "./target/clock-$project_version.jar"
-  skip_cleanup: true
+    secure: qi/XeqXsgxFxt7HNZ4Zt5QEcBlIO9xJxnWOtOUH1XqJHTt10rL2e3FvVjQ/YPj1wsiRaelBUEBEfxV728Kd/F+NTxLyiajTTm/biDnqwkWAKIIsFdCwvdbE3yMwF4IOdtyv0Foe+Wg1ubkI87zq6QS9vz7vF1gXR7Yo7R23gGZ/YTC+qfvmOY+L1L0Ijl8QeD6ecjaFbEKjUVMc/wAtKIQE8IJt9mwWr5l78YeNd2vbTPF+/zJgULloVafQiFRGGZ+00MtL/7QcBOy5CAUtlAVMFYj/9D9fWdFlogWEqkd3CDAvOLpqdM53sjW+XEzRVD4NDXubMsTIwgiFGLqeskB/m3b6YieTd0cZnQ2qgRj4oD8lLRGqx4OOZCQz1dl2UD1IJUOD484hlSCkWaZs9PB/UOANhwjpCD4eD3l5KrEMfg3vGkYu0x/NTxwAxcQxpnqi3KYTPM5SWvxfIvQc37wr+V4Mnob1UM+Xo7DwY/5vV5CnrioPvFcIfJneS4aDpc4ASPAzM0cgT7mbc/Uflm9Vw7S8EbMyYBpB7ofT3WdGG14iaLdtGCDn4GlRln8Xy6/P8zfeajrSMbRmjNqA41dbLZ/n2wUW7HIXsU5KwaE6i6/keefnLe7OB/+FKexlNRpdLPuCmjVIsWHP9cI9OanbNEH71D60EO/IjqVwT16Y=
+  file: ".travis.yml"
   on:
     repo: trickl/clock
-  name: $project_version
