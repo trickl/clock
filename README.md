@@ -7,8 +7,8 @@
 
 A set of java.time.Clock implementations with more useful functionality.
 
-MutableClock - A version of FixedClock with a mutable time.
-RelativeClock - An adjustable clock that time keeps using a relative clock, but can be stopped, started and run at variable speeds.
+* MutableClock - A version of FixedClock with a mutable time.
+* RelativeClock - An adjustable clock that time keeps using a relative clock, but can be stopped, started and run at variable speeds.
 
 ### Prerequisites
 
