@@ -4,17 +4,27 @@ import java.time.Clock;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.ZoneId;
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-@AllArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 final class MutableClock extends Clock {
-  @Getter @Setter private Instant instant;
+  @Setter private Instant time;
   @Getter private final ZoneId zone;
 
+  /**
+   * Create a mutable clock.
+   *
+   * @return A mutable clock
+   */
+  public static MutableClock at(Instant time) {
+    return new MutableClock(time, ZoneId.of("Z"));
+  }
+
   public void advance(Duration duration) {
-    instant = instant.plus(duration);
+    time = time.plus(duration);
   }
 
   @Override
@@ -22,11 +32,11 @@ final class MutableClock extends Clock {
     if (zone.equals(this.zone)) {
       return this;
     }
-    return new MutableClock(instant, zone);
+    return new MutableClock(time, zone);
   }
 
   @Override
   public Instant instant() {
-    return instant;
+    return time;
   }
 }

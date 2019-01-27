@@ -16,7 +16,7 @@ import org.junit.Before;
 public class RelativeClockTest {
     
     private final MutableClock referenceClock =
-        new MutableClock(Instant.MIN, ZoneId.of("Z"));
+        MutableClock.at(Instant.MIN);
     
     private final Instant referenceClockStart = LocalDateTime.of(
             LocalDate.of(2018, Month.JANUARY, 1),
@@ -25,7 +25,7 @@ public class RelativeClockTest {
     
     @Before 
     public void init() {
-      referenceClock.setInstant(referenceClockStart);
+      referenceClock.setTime(referenceClockStart);
     }
 
     @Test
