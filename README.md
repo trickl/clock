@@ -1,5 +1,5 @@
 # Trickl Clock
-
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.trickl/clock/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.trickl/clock)
 [![build_status](https://travis-ci.com/trickl/clock.svg?branch=master)](https://travis-ci.com/trickl/clock)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6039371d2409365c76dc/maintainability)](https://codeclimate.com/github/trickl/clock/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/6039371d2409365c76dc/test_coverage)](https://codeclimate.com/github/trickl/clock/test_coverage)
@@ -10,15 +10,24 @@ A set of [java.time.Clock](https://docs.oracle.com/javase/8/docs/api/java/time/C
 * MutableClock - A version of FixedClock with a mutable time.
 * RelativeClock - An adjustable clock that time keeps using a relative clock, but can be stopped, started and run at variable speeds.
 
-### Prerequisites
+Installation
+============
 
-Requires Maven and a Java 8 compiler installed on your system.
+To install from Maven Central:
+
+```xml
+<dependency>
+  <groupId>com.github.trickl</groupId>
+  <artifactId>clock</artifactId>
+  <version>0.1.1</version>
+</dependency>
+```
 
 ## Usage
 
 See the Junit tests for usage
 
-### Installing
+### Building
 
 To download the library into a folder called "clock" run
 
