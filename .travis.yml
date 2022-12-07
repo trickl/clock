@@ -35,6 +35,6 @@ deploy:
   skip_cleanup: true
   api_key:
     secure: hwBdwvDgP4HIumCj4kvo3FsVx/wh5DxzHzycgQ8RJ2VByhBJ4fZK6+Z3etg2WzFu43p7wRJn7vNeBzTQeTK51Mrx0CqwYERn3Psg4ySDiTMugz3/7mXsLu0NanfhsBeeVQsDHqigTXTuLL8m1t3fL8iBVKWX2QM8c+04pPFQVCjdEwYqmLO2Y9wy8qEBZd7NgfS83dcSp1FoPosHt628pGI/3yYaL13tuvJDwBOeZSyGr+cEEIYdXbt/qqyd+NRNmGuvyky5Dlnu2rXPFVugx9gdhAnhoO+1LNEUs4wx7r9EG2f5jMyT+pmmev0KXimxvD6H0O4FLk+xB1Jh40eXdtIPF5XWXk9O80Nr4ys2xYxajSGmsnpAdpBXxw02gUsz4+tObamE4CAhKddMXx9URtR+vfG8/dgrGV8nNoPkUX4cnfQ8/e3ocCtvBjziTieZ/FzTvKP0RP2Yy5KaO6SIOKjDSBUFywNVL8+4s94JD4geGIdMFTpZkGRhNgaJMTdp6RDtF1rYBtnd2aKwKUrL1b+wEM0BfmoAGFbsTDfV9dkL1PrX5h3FUScNJF/lBC+VUmNhKqGnNB9UyU6nL7h7BZp2BeBvjJwINXpK7F6Uky+SM8lweq6jqaowBsL5LqH+I410eZXq758LT8cg/AmHPdpiWxSw29izhlKRqeeUPOM=
-  file: ".travis.yml"
+  file: "./target/clock-$project_version.jar"
   on:
     repo: trickl/clock
