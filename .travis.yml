@@ -1,6 +1,6 @@
 language: java
 jdk:
-  - openjdk8
+  - openjdk11
 env:
   global:
   - CC_TEST_REPORTER_ID=5652c0db4c6b50a85b5ec103eedd3db9ab43c6605e106394bc5f784ed548c4ba
